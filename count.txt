@@ -1,0 +1,47 @@
+mysql> SELECT COUNT(*) FROM Customer;
++----------+
+| COUNT(*) |
++----------+
+|       59 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COUNT(FirstName) FROM Customer;
++------------------+
+| COUNT(FirstName) |
++------------------+
+|               59 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COUNT(*) FROM Customer
+    -> WHERE FirstName = "Frank";
++----------+
+| COUNT(*) |
++----------+
+|        2 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COUNT(*) FROM Customer WHERE SupportRepId = 4;
++----------+
+| COUNT(*) |
++----------+
+|       20 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT Employee.FirstName AS Employee, COUNT(Customer.FirstName) AS Customer FROM Employee
+    -> JOIN Customer ON Customer.SupportRepId = Employee.EmployeeId
+    -> WHERE Employee.FirstName = 'Jane';;
++----------+----------+
+| Employee | Customer |
++----------+----------+
+| Jane     |       21 |
++----------+----------+
+1 row in set (0.00 sec)
+
+ERROR: 
+No query specified
+
+mysql> exit
