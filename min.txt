@@ -1,0 +1,18 @@
+mysql> SELECT MIN(LastName) FROM Customer;
++---------------+
+| MIN(LastName) |
++---------------+
+| Almeida       |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> notee
+mysql> SELECT MIN(BirthDate) FROM Employee;
++---------------------+
+| MIN(BirthDate)      |
++---------------------+
+| 1947-09-19 00:00:00 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> notee
