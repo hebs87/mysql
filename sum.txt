@@ -1,0 +1,24 @@
+mysql> use Chinook;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> SELECT TOTAL FROM Invoice
+    -> WHERE InvoiceId = 2;
++-------+
+| TOTAL |
++-------+
+|  3.96 |
++-------+
+1 row in set (0.01 sec)
+
+mysql> SELECT SUM(UnitPrice * Quantity) FROM InvoiceLine
+    -> WHERE InvoiceId = 2;
++---------------------------+
+| SUM(UnitPrice * Quantity) |
++---------------------------+
+|                      3.96 |
++---------------------------+
+1 row in set (0.00 sec)
+
+mysql> exit
